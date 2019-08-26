@@ -10,12 +10,57 @@
 
 #define PORT 8080
 
+/* This function allows for the transfer of
+ * files to the server from the client.
+ */
+//void send_recieve_file(){
+//	while (1) {
+//		printf("\nWaiting for file name...\n");
+//
+//		// receive file name
+//		bzero(buffer, sizeof(buffer)); //Clear buffer
+//        	read(new_socket, buffer, 1024);
+//
+//		nBytes = recvfrom(sockfd, net_buf, NET_BUF_SIZE, sendrecvflag,
+//				(struct sockaddr*)&addr_con, &addrlen);
+//
+//        	fp = fopen(net_buf, "r");
+//        	printf("\nFile Name Received: %s\n", net_buf);
+//        	if (fp == NULL)
+//            	printf("\nFile open failed!\n");
+//        els
+//            	printf("\nFile Successfully opened!\n");
+//
+//        	while(1){
+//
+//            		// process
+//            		if (sendFile(fp, net_buf, NET_BUF_SIZE)) {
+//                		sendto(sockfd, net_buf,
+//					NET_BUF_SIZE, sendrecvflag,
+//					(struct sockaddr*)&addr_con, addrlen);
+//                	break;
+//            	}
+//
+//            	// send
+//            	sendto(sockfd, net_buf, NET_BUF_SIZE, sendrecvflag,
+//				(struct sockaddr*)&addr_con, addrlen);
+//            	clearBuf(net_buf);
+//        	}
+//        	if (fp != NULL)
+//            	fclose(fp);
+//    	}
+//}
+//
+
 int main(){
 
-    	struct sockaddr_in address;
+ 	struct sockaddr_in address;
 	int server_fd, new_socket, valread, opt = 1;
-    	int addrlen = sizeof(address);
-    	char buffer[1024] = {0};
+ 	int addrlen = sizeof(address);
+  char buffer[1024] = {0};
+  char break_down[1024] = {0};
+	char *p_buffer = buffer;
+	char *token;
 
 	pid_t childpid; //Data type stands for process id.
 	socklen_t addr_size; //Socklen_t is an unsigned opaque integral type length of at least 32 bits.
@@ -74,18 +119,44 @@ int main(){
 
 			while(1){
 				read(new_socket, buffer, 1024);
+
 				if(strcmp(buffer, ":exit") == 0){
 					printf("Disconnected from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
 					break;
-				} else{
-					printf("Client: %s\n", buffer);
-					bzero(buffer, sizeof(buffer));
-					send(new_socket, buffer, strlen(buffer), 0);
 				}
-			}
+        else{
+
+					while((token = strtok_r(p_buffer, " ", &p_buffer))){
+						printf("P_buffer %s\n", token);
+
+            for(int i =0; i<strlen(break_down); i++){
+              break_down[i] = token;
+              printf("This is breakdown: %s : Len %d \n", break_down, strlen(break_down));
+            }
+          }
+					if(strcmp(token, "put") == 0){
+						printf("Put was found");
+					}
+
+					if(strcmp(token, "get") == 0){
+						printf("Get was found");
+					}
+
+					if(strcmp(token, "run") == 0){
+						printf("Run was found");
+					}
+
+					if(strcmp(token, "list") == 0){
+						printf("List was found");
+					}
+        }
+			printf("Client: %s\n", buffer);
+			bzero(buffer, sizeof(buffer));
+			send(new_socket, buffer, strlen(buffer), 0);
+      }
 		}
 	}
 	close(new_socket);
 
-   	return 0;
+  return 0;
 }

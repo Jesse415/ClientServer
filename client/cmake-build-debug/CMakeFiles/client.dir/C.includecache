@@ -21,6 +21,4 @@ sys/types.h
 -
 arpa/inet.h
 -
-libgen.h
--
 

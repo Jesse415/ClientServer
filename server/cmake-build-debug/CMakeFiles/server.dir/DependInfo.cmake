@@ -4,12 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/listdir.c" "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles/server.dir/listdir.c.o"
+  "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/receive.c" "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles/server.dir/receive.c.o"
+  "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c" "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles/server.dir/runfile.c.o"
+  "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c" "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles/server.dir/sendfile.c.o"
   "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c" "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles/server.dir/server.c.o"
+  "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sysinfo.c" "/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles/server.dir/sysinfo.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../."
   )
 
 # Targets to which this target links.

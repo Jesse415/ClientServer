@@ -123,6 +123,114 @@ server/fast:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+listdir.o: listdir.c.o
+
+.PHONY : listdir.o
+
+# target to build an object file
+listdir.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/listdir.c.o
+.PHONY : listdir.c.o
+
+listdir.i: listdir.c.i
+
+.PHONY : listdir.i
+
+# target to preprocess a source file
+listdir.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/listdir.c.i
+.PHONY : listdir.c.i
+
+listdir.s: listdir.c.s
+
+.PHONY : listdir.s
+
+# target to generate assembly for a file
+listdir.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/listdir.c.s
+.PHONY : listdir.c.s
+
+receive.o: receive.c.o
+
+.PHONY : receive.o
+
+# target to build an object file
+receive.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/receive.c.o
+.PHONY : receive.c.o
+
+receive.i: receive.c.i
+
+.PHONY : receive.i
+
+# target to preprocess a source file
+receive.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/receive.c.i
+.PHONY : receive.c.i
+
+receive.s: receive.c.s
+
+.PHONY : receive.s
+
+# target to generate assembly for a file
+receive.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/receive.c.s
+.PHONY : receive.c.s
+
+runfile.o: runfile.c.o
+
+.PHONY : runfile.o
+
+# target to build an object file
+runfile.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/runfile.c.o
+.PHONY : runfile.c.o
+
+runfile.i: runfile.c.i
+
+.PHONY : runfile.i
+
+# target to preprocess a source file
+runfile.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/runfile.c.i
+.PHONY : runfile.c.i
+
+runfile.s: runfile.c.s
+
+.PHONY : runfile.s
+
+# target to generate assembly for a file
+runfile.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/runfile.c.s
+.PHONY : runfile.c.s
+
+sendfile.o: sendfile.c.o
+
+.PHONY : sendfile.o
+
+# target to build an object file
+sendfile.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendfile.c.o
+.PHONY : sendfile.c.o
+
+sendfile.i: sendfile.c.i
+
+.PHONY : sendfile.i
+
+# target to preprocess a source file
+sendfile.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendfile.c.i
+.PHONY : sendfile.c.i
+
+sendfile.s: sendfile.c.s
+
+.PHONY : sendfile.s
+
+# target to generate assembly for a file
+sendfile.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendfile.c.s
+.PHONY : sendfile.c.s
+
 server.o: server.c.o
 
 .PHONY : server.o
@@ -150,6 +258,33 @@ server.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.s
 .PHONY : server.c.s
 
+sysinfo.o: sysinfo.c.o
+
+.PHONY : sysinfo.o
+
+# target to build an object file
+sysinfo.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sysinfo.c.o
+.PHONY : sysinfo.c.o
+
+sysinfo.i: sysinfo.c.i
+
+.PHONY : sysinfo.i
+
+# target to preprocess a source file
+sysinfo.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sysinfo.c.i
+.PHONY : sysinfo.c.i
+
+sysinfo.s: sysinfo.c.s
+
+.PHONY : sysinfo.s
+
+# target to generate assembly for a file
+sysinfo.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sysinfo.c.s
+.PHONY : sysinfo.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +294,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... server"
 	@echo "... edit_cache"
+	@echo "... listdir.o"
+	@echo "... listdir.i"
+	@echo "... listdir.s"
+	@echo "... receive.o"
+	@echo "... receive.i"
+	@echo "... receive.s"
+	@echo "... runfile.o"
+	@echo "... runfile.i"
+	@echo "... runfile.s"
+	@echo "... sendfile.o"
+	@echo "... sendfile.i"
+	@echo "... sendfile.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
+	@echo "... sysinfo.o"
+	@echo "... sysinfo.i"
+	@echo "... sysinfo.s"
 .PHONY : help
 
 

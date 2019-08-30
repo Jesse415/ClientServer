@@ -150,6 +150,33 @@ client.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.s
 .PHONY : client.c.s
 
+sendFile.o: sendFile.c.o
+
+.PHONY : sendFile.o
+
+# target to build an object file
+sendFile.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/sendFile.c.o
+.PHONY : sendFile.c.o
+
+sendFile.i: sendFile.c.i
+
+.PHONY : sendFile.i
+
+# target to preprocess a source file
+sendFile.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/sendFile.c.i
+.PHONY : sendFile.c.i
+
+sendFile.s: sendFile.c.s
+
+.PHONY : sendFile.s
+
+# target to generate assembly for a file
+sendFile.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/sendFile.c.s
+.PHONY : sendFile.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
+	@echo "... sendFile.o"
+	@echo "... sendFile.i"
+	@echo "... sendFile.s"
 .PHONY : help
 
 

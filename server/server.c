@@ -1,28 +1,19 @@
 // Server side C/C++ program to demonstrate Socket programming
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-
-#define BUFFER_SIZE 1024
-#define PORT 8080
+#include "common.h"
 
 int main(){
 
+    pid_t childpid; //Data type stands for process id.
+    socklen_t addr_size; //Socklen_t is an unsigned opaque integral type length of at least 32 bits.
+    ssize_t total=0;
+
     struct sockaddr_in address;
-	int server_fd, new_socket, valread, opt = 1, length, i;
+    int server_fd, new_socket, valread, opt = 1, length, i;
 	int addrlen = sizeof(address);
 	char buffer[BUFFER_SIZE] = {0};
-	char *rest;
     char *p_buffer = buffer;
     char *token[BUFFER_SIZE];
 
-	pid_t childpid; //Data type stands for process id.
-	socklen_t addr_size; //Socklen_t is an unsigned opaque integral type length of at least 32 bits.
 
 	// Creating socket file descriptor
 	if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0){
@@ -77,13 +68,14 @@ int main(){
 
 			//Read in args from client and run services.
 			while(1){
-				read(new_socket, buffer, BUFFER_SIZE);
-
-				printf(buffer);
+				recv(new_socket, buffer, BUFFER_SIZE, 0);
 
 				//Break down buffer to passable args
                 for (i = 0; i < strlen(buffer); i++) {
-                    token[i] = strtok_r(p_buffer, " ", &rest);
+                    if(strcmp(p_buffer, "\000") == 0){
+                        break;
+                    }
+                    token[i] = strtok_r(p_buffer, " ", &p_buffer);
                     length = strlen(token[i]);
                     if (token[i][length - 1] == '\n' || token[i][length - 1] == '\t') {
                         token[i][length - 1] = '\0';
@@ -95,21 +87,57 @@ int main(){
 					break;
 				}
 
+                //recieve file from client
                 if (strcmp(token[0], "put") == 0 ){
-                    printf("PUT FOUND \n");
-                    //recvfrom();
-                } else if (strcmp(token[0], "get") == 0 ){
-                    //sendto();
-                } else if (strcmp(token[0], "run") == 0) {
-                    printf("Run was found");
-                } else if (strcmp(token[0], "list") == 0) {
-                    printf("List was found");
+                    FILE *fp = fopen(token[2], "wb");
+                    if (fp == NULL){
+                        perror("Can't open file");
+                        exit(1);
+                    }
+                    printf("Start receive file: %s \n", token[1]);
+                    receiveFrom(server_fd, fp, address, (socklen_t*)&addrlen); // inet_ntoa(address.sin_addr));
+                    printf("Receive Success, NumBytes = %ld\n", total);
                 }
+                //Send files to client
+                else if (strcmp(token[0], "get") == 0 ){
+                    FILE *fp = fopen(token[1], "rb");
+                    if (fp == NULL){
+                        perror("Can't open file");
+                        exit(1);
+                    }
+                    printf("Start sending file: %s \n", token[1]);
+                    sendFile(token[1]);
+                    printf("Sending Successful, NumBytes = %ld\n", total);
+                }
+                // Run files located on the server side
+                else if (strcmp(token[0], "run") == 0) {
+                    printf("File %s is starting.\n", token[1]);
+                    runFile(token[1]);
+                }
+                // List files within the directory
+                else if (strcmp(token[0], "list") == 0){
+                    listDirectory(token[0]);
+                }
+                else if (strcmp(token[0], "sys") == 0){
+                    bzero(buffer, sizeof(buffer));
+                    systemInfo(buffer);
+                    send(new_socket, buffer, strlen(buffer), 0);
+                }
+
+                //Clear buffers
                 bzero(token, sizeof(token));
-                bzero(p_buffer, sizeof(p_buffer));
+                //bzero(p_buffer, sizeof(p_buffer));
                 strcpy(buffer, "DONE!");
                 send(new_socket, buffer, strlen(buffer), 0);
                 bzero(buffer, sizeof(buffer));
+
+                valread = read(new_socket, buffer, BUFFER_SIZE);
+
+                if (valread < 0) {
+                    perror("Error reading from socket");
+                } else {
+                    printf("Server: %s\n", buffer);
+                }
 			}
 		}
 	}

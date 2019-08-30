@@ -3,5 +3,13 @@ project(server C)
 
 set(CMAKE_C_STANDARD 11)
 
+include_directories(.)
+
 add_executable(server
-        server.c)
+        common.h
+        listdir.c
+        receive.c
+        runfile.c
+        sendfile.c
+        server.c
+        sysinfo.c)

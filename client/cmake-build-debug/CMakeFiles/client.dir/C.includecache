@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/client.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
 stdio.h
 -
 stdlib.h

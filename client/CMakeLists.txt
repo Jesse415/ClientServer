@@ -3,5 +3,9 @@ project(client C)
 
 set(CMAKE_C_STANDARD 11)
 
+include_directories(.)
+
 add_executable(client
-        client.c)
+        client.c
+        common.h
+        sendFile.c)

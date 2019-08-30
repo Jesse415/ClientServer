@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
 unistd.h
 -
 stdio.h
@@ -23,4 +23,32 @@ netinet/in.h
 -
 arpa/inet.h
 -
+dirent.h
+-
+sys/utsname.h
+-
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/listdir.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/receive.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sysinfo.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
 

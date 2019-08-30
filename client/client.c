@@ -1,21 +1,11 @@
 // Client side C/C++ program to demonstrate Socket programming
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/socket.h>
-#include <sys/types.h>
-#include <arpa/inet.h>
-
-#define BUFFER_SIZE 1024
-#define PORT 8080
+#include "common.h"
 
 int main(){
 
     int client_sock = 0, valread, length, i ;
     struct sockaddr_in serv_addr;
     char buffer[BUFFER_SIZE] = {0};
-    char *rest;
     char *p_buffer = buffer;
     char *token[BUFFER_SIZE];
 
@@ -60,7 +50,10 @@ int main(){
          * to the server should go.
          */
         for (i = 0; i < strlen(buffer); i++) {
-            token[i] = strtok_r(p_buffer, " ", &rest);
+            if(strcmp(p_buffer, "\000") == 0){
+                break;
+            }
+            token[i] = strtok_r(p_buffer, " ", &p_buffer);
             length = strlen(token[i]);
             if (token[i][length - 1] == '\n' || token[i][length - 1] == '\t') {
                 token[i][length - 1] = '\0';
@@ -75,7 +68,8 @@ int main(){
 
 
         if (strcmp(token[0], "put") == 0 ){
-            //sendto();
+            sendFiles(client_sock, token[1]);
+            //puts("Send Success");
         } else if (strcmp(token[0], "get") == 0 ){
             //recvfrom();
         } else if (strcmp(token[0], "run") == 0) {

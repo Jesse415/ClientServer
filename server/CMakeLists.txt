@@ -10,6 +10,6 @@ add_executable(server
         listdir.c
         receive.c
         runfile.c
-        sendfile.c
+        sendFile.c
         server.c
         sysinfo.c)

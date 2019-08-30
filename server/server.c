@@ -101,8 +101,12 @@ int main(){
                         exit(1);
                     }
                     printf("Start receive file: %s \n", token[1]);
-                    receiveFrom(server_fd, fp, address, (socklen_t*)&addrlen); // inet_ntoa(address.sin_addr));
+                    read(new_socket, buffer, BUFFER_SIZE);
+                    receiveFrom(fp, buffer);
                     printf("Receive Success, NumBytes = %ld\n", total);
+                    bzero(buffer, sizeof(buffer));
+                    strcpy(buffer, "DONE!");
+                    send(new_socket, buffer, strlen(buffer), 0);
                 }
                 //Send files to client
                 else if (strcmp(token[0], "get") == 0 ){
@@ -112,8 +116,11 @@ int main(){
                         exit(1);
                     }
                     printf("Start sending file: %s \n", token[1]);
-                    sendFile(token[1]);
+                    sendFile(new_socket, token[1]);
                     printf("Sending Successful, NumBytes = %ld\n", total);
+                    bzero(buffer, sizeof(buffer));
+                    strcpy(buffer, "DONE!");
+                    send(new_socket, buffer, strlen(buffer), 0);
                 }
                 // Run files located on the server side
                 else if (strcmp(token[0], "run") == 0) {
@@ -126,12 +133,15 @@ int main(){
                 // List files within the directory
                 else if (strcmp(token[0], "list") == 0){
                     bzero(buffer, sizeof(buffer));
-                    listDirectory(token[1]);
+                    listDirectory(token[1], buffer);
                     send(new_socket, buffer, strlen(buffer), 0);
                 }
                 else if (strcmp(token[0], "sys") == 0){
                     bzero(buffer, sizeof(buffer));
                     systemInfo(buffer);
+                    send(new_socket, buffer, strlen(buffer), 0);
+                    bzero(buffer, sizeof(buffer));
+                    strcpy(buffer, "DONE!");
                     send(new_socket, buffer, strlen(buffer), 0);
                 }
 

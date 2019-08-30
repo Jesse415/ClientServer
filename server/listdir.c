@@ -1,6 +1,6 @@
 #include "common.h"
 
-void listDirectory(char *filename){
+void listDirectory(char *filename, char *bufferadder){
 
     char path[1000];
     struct dirent *dp;
@@ -18,7 +18,7 @@ void listDirectory(char *filename){
             strcpy(path, filename);
             strcat(path, "/");
             strcat(path, dp->d_name);
-            listDirectory(path);
+            listDirectory(path, bufferadder);
         }
     }
     closedir(dir);

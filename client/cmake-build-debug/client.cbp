@@ -84,6 +84,9 @@
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h">
 			<Option target="client"/>
 		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/receive.c">
+			<Option target="client"/>
+		</Unit>
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c">
 			<Option target="client"/>
 		</Unit>

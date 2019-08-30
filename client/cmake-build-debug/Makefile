@@ -150,6 +150,33 @@ client.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.s
 .PHONY : client.c.s
 
+receive.o: receive.c.o
+
+.PHONY : receive.o
+
+# target to build an object file
+receive.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/receive.c.o
+.PHONY : receive.c.o
+
+receive.i: receive.c.i
+
+.PHONY : receive.i
+
+# target to preprocess a source file
+receive.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/receive.c.i
+.PHONY : receive.c.i
+
+receive.s: receive.c.s
+
+.PHONY : receive.s
+
+# target to generate assembly for a file
+receive.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/receive.c.s
+.PHONY : receive.c.s
+
 sendFile.o: sendFile.c.o
 
 .PHONY : sendFile.o
@@ -189,6 +216,9 @@ help:
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
+	@echo "... receive.o"
+	@echo "... receive.i"
+	@echo "... receive.s"
 	@echo "... sendFile.o"
 	@echo "... sendFile.i"
 	@echo "... sendFile.s"

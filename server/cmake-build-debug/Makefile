@@ -204,32 +204,32 @@ runfile.c.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/runfile.c.s
 .PHONY : runfile.c.s
 
-sendfile.o: sendfile.c.o
+sendFile.o: sendFile.c.o
 
-.PHONY : sendfile.o
+.PHONY : sendFile.o
 
 # target to build an object file
-sendfile.c.o:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendfile.c.o
-.PHONY : sendfile.c.o
+sendFile.c.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendFile.c.o
+.PHONY : sendFile.c.o
 
-sendfile.i: sendfile.c.i
+sendFile.i: sendFile.c.i
 
-.PHONY : sendfile.i
+.PHONY : sendFile.i
 
 # target to preprocess a source file
-sendfile.c.i:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendfile.c.i
-.PHONY : sendfile.c.i
+sendFile.c.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendFile.c.i
+.PHONY : sendFile.c.i
 
-sendfile.s: sendfile.c.s
+sendFile.s: sendFile.c.s
 
-.PHONY : sendfile.s
+.PHONY : sendFile.s
 
 # target to generate assembly for a file
-sendfile.c.s:
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendfile.c.s
-.PHONY : sendfile.c.s
+sendFile.c.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/sendFile.c.s
+.PHONY : sendFile.c.s
 
 server.o: server.c.o
 
@@ -303,9 +303,9 @@ help:
 	@echo "... runfile.o"
 	@echo "... runfile.i"
 	@echo "... runfile.s"
-	@echo "... sendfile.o"
-	@echo "... sendfile.i"
-	@echo "... sendfile.s"
+	@echo "... sendFile.o"
+	@echo "... sendFile.i"
+	@echo "... sendFile.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

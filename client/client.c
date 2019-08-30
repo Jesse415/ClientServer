@@ -1,16 +1,15 @@
 // Client side C/C++ program to demonstrate Socket programming
 #include "common.h"
 
-int main(){
+int main() {
 
-    int client_sock = 0, valread, length, i ;
+    int client_sock = 0, valread, length, i;
     struct sockaddr_in serv_addr;
     char buffer[BUFFER_SIZE] = {0};
-    char *p_buffer = buffer;
     char *token[BUFFER_SIZE];
 
     //If there is an error creating the socket
-    if ((client_sock = socket(AF_INET, SOCK_STREAM, 0)) < 0){
+    if ((client_sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         printf("\n [-]Socket creation error \n");
         return -1;
     }
@@ -21,12 +20,12 @@ int main(){
     serv_addr.sin_port = htons(PORT);
 
     // Convert IPv4 and IPv6 addresses from text to binary form
-    if(inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<=0){
+    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0) {
         printf("\nInvalid address/ Address not supported \n");
         return -1;
     }
 
-    if(connect(client_sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0){
+    if (connect(client_sock, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
         printf("\n[-]Connection Failed \n");
         return -1;
     }
@@ -34,10 +33,12 @@ int main(){
     printf("[+] Client connected to Server.\n");
 
     //This is to keep the connection messages between client and server going
-    while(1) {
+    while (1) {
         printf("Please enter the message: \t");
         bzero(buffer, sizeof(buffer));
         fgets(buffer, BUFFER_SIZE, stdin);
+
+        char *p_buffer = buffer;
 
         /*This sends a message to the server.
          */
@@ -50,7 +51,7 @@ int main(){
          * to the server should go.
          */
         for (i = 0; i < strlen(buffer); i++) {
-            if(strcmp(p_buffer, "\000") == 0){
+            if (strcmp(p_buffer, "\000") == 0) {
                 break;
             }
             token[i] = strtok_r(p_buffer, " ", &p_buffer);
@@ -67,15 +68,24 @@ int main(){
         }
 
 
-        if (strcmp(token[0], "put") == 0 ){
+        if (strcmp(token[0], "put") == 0) {
             sendFiles(client_sock, token[1]);
-            //puts("Send Success");
-        } else if (strcmp(token[0], "get") == 0 ){
-            //recvfrom();
+        } else if (strcmp(token[0], "get") == 0) {
+            bzero(buffer, sizeof(buffer));
+            valread = read(client_sock, buffer, BUFFER_SIZE);
+
+            if (valread < 0) {
+                perror("Error reading from socket");
+            } else {
+                printf("Server: %s\n", buffer);
+            }
         } else if (strcmp(token[0], "run") == 0) {
             printf("Running %s...\n", token[1]);
         } else if (strcmp(token[0], "list") == 0) {
             printf("Listing directory...\n");
+        } else if (strcmp(token[0], "sys") == 0) {
+            read(client_sock, buffer, BUFFER_SIZE);
+            printf("Server: \n%s\n", buffer);
         }
 
         //send(sock, buffer, strlen(buffer), 0);
@@ -87,5 +97,9 @@ int main(){
         } else {
             printf("Server: %s\n", buffer);
         }
+        //Clear buffers
+        bzero(token, sizeof(token));
+        bzero(p_buffer, sizeof(*p_buffer));
+        bzero(buffer, sizeof(buffer));
     }
 }

@@ -8,4 +8,5 @@ include_directories(.)
 add_executable(client
         client.c
         common.h
+        receive.c
         sendFile.c)

@@ -1,11 +1,11 @@
-all: listdir.o sendfile.o receive.o runfile.o sysinfo.o server.o
-	g++ listdir.o sendfile.o receive.o runfile.o sysinfo.o server.o -o server
+all: listdir.o sendFile.o receive.o runfile.o sysinfo.o server.o
+	g++ listdir.o sendFile.o receive.o runfile.o sysinfo.o server.o -o server
 
 listdir.o: listdir.c common.h
 	g++ -I. -c listdir.c
 
-sendfile.o: sendfile.c common.h
-	g++ -I. -c sendfile.c
+sendFile.o: sendFile.c common.h
+	g++ -I. -c sendFile.c
 
 receive.o: receive.c common.h
 	g++ -I. -c receive.c

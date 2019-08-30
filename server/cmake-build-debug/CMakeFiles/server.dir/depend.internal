@@ -10,9 +10,9 @@ CMakeFiles/server.dir/receive.c.o
 CMakeFiles/server.dir/runfile.c.o
  /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
  /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c
-CMakeFiles/server.dir/sendfile.c.o
+CMakeFiles/server.dir/sendFile.c.o
  /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
- /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c
+ /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c
 CMakeFiles/server.dir/server.c.o
  /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
  /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c

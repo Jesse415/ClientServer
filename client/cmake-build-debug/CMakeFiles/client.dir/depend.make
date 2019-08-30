@@ -4,6 +4,9 @@
 CMakeFiles/client.dir/client.c.o: ../client.c
 CMakeFiles/client.dir/client.c.o: ../common.h
 
+CMakeFiles/client.dir/receive.c.o: ../common.h
+CMakeFiles/client.dir/receive.c.o: ../receive.c
+
 CMakeFiles/client.dir/sendFile.c.o: ../common.h
 CMakeFiles/client.dir/sendFile.c.o: ../sendFile.c
 

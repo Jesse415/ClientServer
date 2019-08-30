@@ -90,7 +90,7 @@
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c">
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c">

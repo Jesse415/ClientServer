@@ -96,18 +96,18 @@ CMakeFiles/server.dir/runfile.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/runfile.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c -o CMakeFiles/server.dir/runfile.c.s
 
-CMakeFiles/server.dir/sendfile.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/sendfile.c.o: ../sendfile.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/server.dir/sendfile.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/sendfile.c.o   -c /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c
+CMakeFiles/server.dir/sendFile.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/sendFile.c.o: ../sendFile.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/server.dir/sendFile.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/sendFile.c.o   -c /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c
 
-CMakeFiles/server.dir/sendfile.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/sendfile.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c > CMakeFiles/server.dir/sendfile.c.i
+CMakeFiles/server.dir/sendFile.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/sendFile.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c > CMakeFiles/server.dir/sendFile.c.i
 
-CMakeFiles/server.dir/sendfile.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/sendfile.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendfile.c -o CMakeFiles/server.dir/sendfile.c.s
+CMakeFiles/server.dir/sendFile.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/sendFile.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c -o CMakeFiles/server.dir/sendFile.c.s
 
 CMakeFiles/server.dir/server.c.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/server.c.o: ../server.c
@@ -140,7 +140,7 @@ server_OBJECTS = \
 "CMakeFiles/server.dir/listdir.c.o" \
 "CMakeFiles/server.dir/receive.c.o" \
 "CMakeFiles/server.dir/runfile.c.o" \
-"CMakeFiles/server.dir/sendfile.c.o" \
+"CMakeFiles/server.dir/sendFile.c.o" \
 "CMakeFiles/server.dir/server.c.o" \
 "CMakeFiles/server.dir/sysinfo.c.o"
 
@@ -150,7 +150,7 @@ server_EXTERNAL_OBJECTS =
 server: CMakeFiles/server.dir/listdir.c.o
 server: CMakeFiles/server.dir/receive.c.o
 server: CMakeFiles/server.dir/runfile.c.o
-server: CMakeFiles/server.dir/sendfile.c.o
+server: CMakeFiles/server.dir/sendFile.c.o
 server: CMakeFiles/server.dir/server.c.o
 server: CMakeFiles/server.dir/sysinfo.c.o
 server: CMakeFiles/server.dir/build.make

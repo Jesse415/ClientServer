@@ -11,7 +11,6 @@ int main(){
     int server_fd, new_socket, valread, opt = 1, length, i;
 	int addrlen = sizeof(address);
 	char buffer[BUFFER_SIZE] = {0};
-    char *p_buffer = buffer;
     char *token[BUFFER_SIZE];
 
 
@@ -68,7 +67,14 @@ int main(){
 
 			//Read in args from client and run services.
 			while(1){
-				recv(new_socket, buffer, BUFFER_SIZE, 0);
+			    printf("Waiting for command....\n");
+				valread = read(new_socket, buffer, BUFFER_SIZE);
+                char *p_buffer = buffer;
+
+                if (valread < 0) {
+                    perror("Error reading from socket");
+                } else {
+                    printf("Client: %s\n", buffer);
 
 				//Break down buffer to passable args
                 for (i = 0; i < strlen(buffer); i++) {
@@ -84,7 +90,7 @@ int main(){
 
                 if(strcmp(buffer, ":exit") == 0){
 					printf("Disconnected from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
-					break;
+                    return 1;
 				}
 
                 //recieve file from client
@@ -113,10 +119,15 @@ int main(){
                 else if (strcmp(token[0], "run") == 0) {
                     printf("File %s is starting.\n", token[1]);
                     runFile(token[1]);
+                    bzero(buffer, sizeof(buffer));
+                    strcpy(buffer, "DONE!");
+                    send(new_socket, buffer, strlen(buffer), 0);
                 }
                 // List files within the directory
                 else if (strcmp(token[0], "list") == 0){
-                    listDirectory(token[0]);
+                    bzero(buffer, sizeof(buffer));
+                    listDirectory(token[1]);
+                    send(new_socket, buffer, strlen(buffer), 0);
                 }
                 else if (strcmp(token[0], "sys") == 0){
                     bzero(buffer, sizeof(buffer));
@@ -126,17 +137,10 @@ int main(){
 
                 //Clear buffers
                 bzero(token, sizeof(token));
-                //bzero(p_buffer, sizeof(p_buffer));
-                strcpy(buffer, "DONE!");
-                send(new_socket, buffer, strlen(buffer), 0);
+                bzero(p_buffer, sizeof(*p_buffer));
                 bzero(buffer, sizeof(buffer));
-
-                valread = read(new_socket, buffer, BUFFER_SIZE);
-
-                if (valread < 0) {
-                    perror("Error reading from socket");
-                } else {
-                    printf("Server: %s\n", buffer);
+                //strcpy(buffer, "DONE!");
+                //send(new_socket, buffer, strlen(buffer), 0);
                 }
 			}
 		}

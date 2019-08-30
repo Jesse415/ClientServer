@@ -63,7 +63,7 @@ int main(){
         if (strcmp(token[0], ":exit") == 0) {
             close(client_sock);
             printf("[-] Disconnected from server.\n");
-            exit(1);
+            return 1;
         }
 
 
@@ -73,9 +73,9 @@ int main(){
         } else if (strcmp(token[0], "get") == 0 ){
             //recvfrom();
         } else if (strcmp(token[0], "run") == 0) {
-            printf("Run was found");
+            printf("Running %s...\n", token[1]);
         } else if (strcmp(token[0], "list") == 0) {
-            printf("List was found");
+            printf("Listing directory...\n");
         }
 
         //send(sock, buffer, strlen(buffer), 0);

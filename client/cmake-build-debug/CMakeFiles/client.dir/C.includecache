@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/client.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
-
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
 stdio.h
 -
@@ -26,11 +22,9 @@ sys/types.h
 arpa/inet.h
 -
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/receive.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
-
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c
+errno.h
+-
 common.h
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
 

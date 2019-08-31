@@ -91,15 +91,21 @@ int main(){
 
                 if(strcmp(buffer, ":exit") == 0){
 					printf("Disconnected from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
-                    return 1;
+                    exit(1);
 				}
 
                 //recieve file from client
                 if (strcmp(token[0], "put") == 0 ){
                     FILE *fp = fopen(token[2], "wb");
                     if (fp == NULL){
-                        perror("Can't open file");
-                        exit(1);
+                        bzero(buffer, sizeof(buffer));
+                        strcpy(buffer, strerror(errno));
+                        strcat(buffer, "\n");
+                        send(new_socket, buffer, strlen(buffer), 0);
+                        bzero(buffer, sizeof(buffer));
+                        strcpy(buffer, "DONE!");
+                        send(new_socket, buffer, strlen(buffer), 0);
+                        continue;
                     }
                     printf("Start receive file: %s \n", token[1]);
                     read(new_socket, buffer, BUFFER_SIZE);
@@ -113,8 +119,14 @@ int main(){
                 else if (strcmp(token[0], "get") == 0 ){
                     FILE *fp = fopen(token[1], "rb");
                     if (fp == NULL){
-                        perror("Can't open file");
-                        exit(1);
+                        bzero(buffer, sizeof(buffer));
+                        strcpy(buffer, strerror(errno));
+                        strcat(buffer, "\n");
+                        send(new_socket, buffer, strlen(buffer), 0);
+                        bzero(buffer, sizeof(buffer));
+                        strcpy(buffer, "DONE!");
+                        send(new_socket, buffer, strlen(buffer), 0);
+                        continue;
                     }
                     printf("Start sending file: %s \n", token[1]);
                     sendFile(new_socket, token[1]);
@@ -150,14 +162,13 @@ int main(){
                 else{
                     bzero(buffer, sizeof(buffer));
                     strcpy(buffer, "Invalid input, Try again!");
+                    send(new_socket, buffer, strlen(buffer), 0);
                 }
 
                 //Clear buffers
                 bzero(token, sizeof(token));
                 bzero(p_buffer, sizeof(*p_buffer));
                 bzero(buffer, sizeof(buffer));
-                //strcpy(buffer, "DONE!");
-                //send(new_socket, buffer, strlen(buffer), 0);
                 }
 			}
 		}

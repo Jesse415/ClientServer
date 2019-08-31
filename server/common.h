@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #include <dirent.h>
 #include <sys/utsname.h>
+#include <errno.h>
 
 #define sendrecvflag 0
 #define BUFFER_SIZE 1024

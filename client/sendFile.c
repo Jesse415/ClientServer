@@ -1,3 +1,4 @@
+#include <errno.h>
 #include "common.h"
 
 ssize_t total=0;
@@ -8,6 +9,10 @@ void sendFiles(int sockfd, char *filename){
     fp = fopen(filename, "rb");
     if(fp == NULL){
         perror("File");
+        bzero(sendbuffer, sizeof(sendbuffer));
+        strcpy(sendbuffer, strerror(errno));
+        strcat(sendbuffer, "\n");
+        return;
     }
     while ((b = fread(sendbuffer, sizeof(char), BUFFER_SIZE, fp)) > 0){
         total+=b;

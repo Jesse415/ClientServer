@@ -28,7 +28,7 @@ dirent.h
 sys/utsname.h
 -
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c
 common.h
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
 

@@ -126,7 +126,7 @@ int main(){
                 // Run files located on the server side
                 else if (strcmp(token[0], "run") == 0) {
                     printf("File %s is starting.\n", token[1]);
-                    runFile(token[1]);
+                    runFile(token[1], token[2]);
                     bzero(buffer, sizeof(buffer));
                     strcpy(buffer, "DONE!");
                     send(new_socket, buffer, strlen(buffer), 0);
@@ -146,6 +146,10 @@ int main(){
                     bzero(buffer, sizeof(buffer));
                     strcpy(buffer, "DONE!");
                     send(new_socket, buffer, strlen(buffer), 0);
+                }
+                else{
+                    bzero(buffer, sizeof(buffer));
+                    strcpy(buffer, "Invalid input, Try again!");
                 }
 
                 //Clear buffers

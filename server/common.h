@@ -20,6 +20,6 @@
 #endif //SERVER_MISC_H
 void listDirectory(char *filename, char *bufferaddr);
 void receiveFrom(FILE *fp, char *buffer_file); // struct sockaddr_in address, socklen_t *addrlen);
-void runFile(char *filename);
+void runFile(char *command, char *filename);
 void sendFile(int sockfd, char *filename);
 void systemInfo(char *bufferaddr);

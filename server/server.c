@@ -10,6 +10,7 @@ int main(){
     struct sockaddr_in address;
     int server_fd, new_socket, valread, opt = 1, length, i;
 	int addrlen = sizeof(address);
+	char home[2] = ".";
 	char buffer[BUFFER_SIZE] = {0};
     char *token[BUFFER_SIZE];
 
@@ -132,7 +133,9 @@ int main(){
                 }
                 // List files within the directory
                 else if (strcmp(token[0], "list") == 0){
-                    bzero(buffer, sizeof(buffer));
+                    if(token[1] == NULL){
+                        token[1] = home;
+                    }
                     listDirectory(token[1], buffer);
                     send(new_socket, buffer, strlen(buffer), 0);
                 }

@@ -2,24 +2,19 @@
 
 void listDirectory(char *filename, char *bufferadder){
 
-    char path[1000];
-    struct dirent *dp;
-    DIR *dir = opendir(filename);
+    DIR *dir_ptr;
+    struct dirent *direntp;
+    char strbuffer[BUFFER_SIZE] = {0};
 
-    // Unable to open directory stream
-    if (!dir) {
-        return;
+    if((dir_ptr = opendir(filename)) == NULL){
+        fprintf(stderr, "ls: can't open %s\n", filename);
     }
-    while ((dp = readdir(dir)) != NULL){
-        if (strcmp(dp->d_name, ".") != 0 && strcmp(dp->d_name, "..") != 0){
-            printf("%s\n", dp->d_name);
-
-            // Construct new path from our base path
-            strcpy(path, filename);
-            strcat(path, "/");
-            strcat(path, dp->d_name);
-            listDirectory(path, bufferadder);
+    else {
+        bzero(bufferadder, sizeof(bufferadder));
+        while ((direntp = readdir(dir_ptr)) != NULL){
+            sprintf(strbuffer, "%s\n", direntp->d_name);
+            strcat(bufferadder, strbuffer);
         }
     }
-    closedir(dir);
+    closedir(dir_ptr);
 }

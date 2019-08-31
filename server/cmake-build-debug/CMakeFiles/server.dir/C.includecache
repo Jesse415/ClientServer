@@ -28,27 +28,7 @@ dirent.h
 sys/utsname.h
 -
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/listdir.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
-
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/receive.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
-
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
-
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
-
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
-common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
-
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sysinfo.c
 common.h
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
 

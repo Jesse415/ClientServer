@@ -26,3 +26,11 @@ sys/types.h
 arpa/inet.h
 -
 
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/receive.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+

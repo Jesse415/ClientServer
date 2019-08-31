@@ -6,6 +6,6 @@
 #include <sys/types.h>
 #include <arpa/inet.h>
 
-#define BUFFER_SIZE 1024
+#define BUFFER_SIZE 100000
 #define PORT 8080
 void sendFiles(int sockfd, char *filename);

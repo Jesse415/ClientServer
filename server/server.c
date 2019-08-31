@@ -50,21 +50,24 @@ int main(){
 	/* After connection jump into this while loop, fork
 	 * off and run args from the clients.
 	 */
-	while(1){
-		new_socket = accept(server_fd, (struct sockaddr *)&address,(socklen_t*)&addrlen);
- 		if(new_socket < 0){
-			exit(1);
-		}
+	while(1) {
+        new_socket = accept(server_fd, (struct sockaddr *) &address, (socklen_t *) &addrlen);
+        if (new_socket < 0) {
+            exit(1);
+        }
 
-		/* inet_ntoa() converts the internet host address in to
-		 * a string in IPv4 dotted-decimal notation.
-		 * ntohs() Converts the unsigned short integer netshort
-		 * from network byte order to host byte order.
-		 */
-		printf("Connection accepted from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
+        /* inet_ntoa() converts the internet host address in to
+         * a string in IPv4 dotted-decimal notation.
+         * ntohs() Converts the unsigned short integer netshort
+         * from network byte order to host byte order.
+         */
+        printf("Connection accepted from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
 
-//		if((childpid = fork()) == 0){
-//			close(server_fd);
+        if ((childpid = fork()) == 0) {
+            close(server_fd);
+            break;
+        }
+    }
 
 			//Read in args from client and run services.
 			while(1){
@@ -171,6 +174,4 @@ int main(){
                 bzero(buffer, sizeof(buffer));
                 }
 			}
-		}
-	}
-//}
+}

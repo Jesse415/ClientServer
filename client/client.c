@@ -31,6 +31,12 @@ int main() {
     }
 
     printf("[+] Client connected to Server.\n");
+    printf("[+] Command list are:\n"
+           "put <absolute directory>/<file name src> <absolute directory>/<file name dest>\n"
+           "list <absolute directory>/<file name src>\n"
+           "get <absolute directory>/<file name src>\n"
+           "run <Command>\n"
+           "sys\n");
 
     //This is to keep the connection messages between client and server going
     while (1) {

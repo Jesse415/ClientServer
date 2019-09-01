@@ -1,5 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client.dir/client.c.o"
+<<<<<<< HEAD
+=======
+  "CMakeFiles/client.dir/receive.c.o"
+  "CMakeFiles/client.dir/sendFile.c.o"
+>>>>>>> develope
   "client"
   "client.pdb"
 )

@@ -1,4 +1,5 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client
+<<<<<<< HEAD
 -- The C compiler identification is GNU 9.1.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
@@ -6,6 +7,8 @@
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
+=======
+>>>>>>> develope
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug

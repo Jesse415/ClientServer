@@ -34,6 +34,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
+=======
+					<Add directory="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/."/>
+>>>>>>> develope
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
@@ -53,6 +57,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
+=======
+					<Add directory="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/."/>
+>>>>>>> develope
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
@@ -76,9 +84,33 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+<<<<<<< HEAD
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c">
 			<Option target="server"/>
 		</Unit>
+=======
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/listdir.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/receive.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/runfile.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sendFile.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/sysinfo.c">
+			<Option target="server"/>
+		</Unit>
+>>>>>>> develope
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

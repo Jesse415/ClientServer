@@ -3,3 +3,13 @@
 
 CMakeFiles/client.dir/client.c.o
  /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/client.c
+<<<<<<< HEAD
+=======
+ /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+CMakeFiles/client.dir/receive.c.o
+ /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+ /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/receive.c
+CMakeFiles/client.dir/sendFile.c.o
+ /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+ /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c
+>>>>>>> develope

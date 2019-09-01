@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
+=======
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+>>>>>>> develope
 unistd.h
 -
 stdio.h
@@ -23,4 +27,17 @@ netinet/in.h
 -
 arpa/inet.h
 -
+<<<<<<< HEAD
+=======
+dirent.h
+-
+sys/utsname.h
+-
+errno.h
+-
+
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
+common.h
+/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+>>>>>>> develope
 

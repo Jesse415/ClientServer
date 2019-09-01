@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /usr/bin/cc -g   CMakeFiles/client.dir/client.c.o  -o client 
+=======
+/usr/bin/cc -g   CMakeFiles/client.dir/client.c.o CMakeFiles/client.dir/receive.c.o CMakeFiles/client.dir/sendFile.c.o  -o client 
+>>>>>>> develope

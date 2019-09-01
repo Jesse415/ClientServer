@@ -6,5 +6,9 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
+<<<<<<< HEAD
 C_INCLUDES = 
+=======
+C_INCLUDES = -I/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/. 
+>>>>>>> develope
 

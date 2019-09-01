@@ -34,6 +34,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
+=======
+					<Add directory="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/."/>
+>>>>>>> develope
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
@@ -53,6 +57,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+<<<<<<< HEAD
+=======
+					<Add directory="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/."/>
+>>>>>>> develope
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
@@ -79,6 +87,18 @@
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/client.c">
 			<Option target="client"/>
 		</Unit>
+<<<<<<< HEAD
+=======
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/receive.c">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c">
+			<Option target="client"/>
+		</Unit>
+>>>>>>> develope
 		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -1,1 +1,3 @@
-/usr/bin/cc -g   CMakeFiles/client.dir/client.c.o CMakeFiles/client.dir/receive.c.o CMakeFiles/client.dir/sendFile.c.o  -o client 
+C:\CLion2018\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\client.dir/objects.a
+C:\TDM-GCC-64\bin\ar.exe cr CMakeFiles\client.dir/objects.a @CMakeFiles\client.dir\objects1.rsp
+C:\TDM-GCC-64\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\client.dir/objects.a -Wl,--no-whole-archive  -o client.exe -Wl,--out-implib,libclient.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\client.dir\linklibs.rsp

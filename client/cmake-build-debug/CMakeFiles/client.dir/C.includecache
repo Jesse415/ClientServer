@@ -6,25 +6,49 @@
 
 #IncludeRegexTransform: 
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/client.c
+common.h
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/common.h
+
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/common.h
+unistd.h
+-
 stdio.h
 -
 stdlib.h
 -
 string.h
 -
+sys/types.h
+-
+dirent.h
+-
+errno.h
+-
 unistd.h
+-
+winsock2.h
+-
+winsock.h
+-
+ws2tcpip.h
 -
 sys/socket.h
 -
-sys/types.h
+netinet/in.h
+-
+sys/utsname.h
 -
 arpa/inet.h
 -
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/receive.c
+common.h
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/common.h
+
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/sendFile.c
 errno.h
 -
 common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/common.h
 

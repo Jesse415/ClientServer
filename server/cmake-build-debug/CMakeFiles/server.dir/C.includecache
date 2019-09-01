@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/server/common.h
 unistd.h
 -
 stdio.h
@@ -15,22 +15,30 @@ stdlib.h
 -
 string.h
 -
-sys/socket.h
--
 sys/types.h
--
-netinet/in.h
--
-arpa/inet.h
 -
 dirent.h
 -
-sys/utsname.h
--
 errno.h
 -
+unistd.h
+-
+winsock2.h
+-
+winsock.h
+-
+ws2tcpip.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+sys/utsname.h
+-
+arpa/inet.h
+-
 
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/server.c
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/server/server.c
 common.h
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/common.h
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/server/common.h
 

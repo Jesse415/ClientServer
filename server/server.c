@@ -24,7 +24,7 @@ int main(){
 	printf("[+]Server Socket is created.\n");
 
 	// Forcefully attaching socket to the port 8080
-	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))){
+	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, (char *) &opt, sizeof(opt))){
 	    perror("[-]Setsockopt");
 	    exit(EXIT_FAILURE);
 	}
@@ -63,10 +63,16 @@ int main(){
          */
         printf("Connection accepted from %s:%d\n", inet_ntoa(address.sin_addr), ntohs(address.sin_port));
 
-        if ((childpid = fork()) == 0) {
-            close(server_fd);
-            break;
-        }
+        #ifdef _WIN32
+            if ((childpid = _spawnv(_P_WAIT, "server.exe", (const char *const *) "spawn")) == 0){
+                close(server_fd);
+            }
+        #else
+            if ((childpid = fork()) == 0) {
+                close(server_fd);
+                break;
+            }
+        #endif
     }
 
 			//Read in args from client and run services.

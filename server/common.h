@@ -5,16 +5,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/socket.h>
 #include <sys/types.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
 #include <dirent.h>
-#include <sys/utsname.h>
 #include <errno.h>
+#include <unistd.h>
+#ifdef _WIN32
+    #include <winsock2.h>
+    #include <winsock.h>
+    #include <ws2tcpip.h>
+    #define SO_REUSEPORT SO_EXCLUSIVEADDRUSE
 
-#define sendrecvflag 0
-#define BUFFER_SIZE 1024
+#else
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <sys/utsname.h>
+    #include <arpa/inet.h>
+#endif
+
+#define bzero(b,len) (memset((b), '\0', (len)), (void) 0)
+//#define socket socklen_t
+#define BUFFER_SIZE 100000
 #define PORT 8080
 #ifndef SERVER_MISC_H
 #define SERVER_MISC_H

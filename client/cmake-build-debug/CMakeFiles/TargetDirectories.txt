@@ -1,3 +1,3 @@
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/CMakeFiles/client.dir
-/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/CMakeFiles/client.dir
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/CMakeFiles/rebuild_cache.dir

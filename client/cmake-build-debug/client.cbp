@@ -8,89 +8,89 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug"/>
+				<Option working_dir="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="client">
-				<Option output="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug"/>
+				<Option output="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/client.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/."/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/."/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="client/fast">
-				<Option output="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug"/>
+				<Option output="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/client.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/."/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.1.0/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/."/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug"/>
+				<Option working_dir="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/client.c">
+		<Unit filename="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/client.c">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/common.h">
+		<Unit filename="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/common.h">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/receive.c">
+		<Unit filename="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/receive.c">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/sendFile.c">
+		<Unit filename="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/sendFile.c">
 			<Option target="client"/>
 		</Unit>
-		<Unit filename="/home/one/Documents/Griffith/distributed_2803ICT/ClientServer/client/CMakeLists.txt">
+		<Unit filename="C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/client/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

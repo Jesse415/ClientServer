@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/client.dir/client.c.o"
-  "CMakeFiles/client.dir/receive.c.o"
-  "CMakeFiles/client.dir/sendFile.c.o"
-  "client"
+  "CMakeFiles/client.dir/client.c.obj"
+  "CMakeFiles/client.dir/receive.c.obj"
+  "CMakeFiles/client.dir/sendFile.c.obj"
   "client.pdb"
+  "client.exe"
+  "client.exe.manifest"
+  "libclient.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

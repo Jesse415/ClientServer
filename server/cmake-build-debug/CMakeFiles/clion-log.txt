@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server
+C:\CLion2018\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\s5109293\Desktop\ClientServer-develope\ClientServer-develope\server
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/one/Documents/Griffith/distributed_2803ICT/ClientServer/server/cmake-build-debug
+-- Build files have been written to: C:/Users/s5109293/Desktop/ClientServer-develope/ClientServer-develope/server/cmake-build-debug

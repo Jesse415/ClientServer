@@ -1,12 +1,15 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/server.dir/listdir.c.o"
-  "CMakeFiles/server.dir/receive.c.o"
-  "CMakeFiles/server.dir/runfile.c.o"
-  "CMakeFiles/server.dir/sendFile.c.o"
-  "CMakeFiles/server.dir/server.c.o"
-  "CMakeFiles/server.dir/sysinfo.c.o"
-  "server"
+  "CMakeFiles/server.dir/error.c.obj"
+  "CMakeFiles/server.dir/listdir.c.obj"
+  "CMakeFiles/server.dir/receive.c.obj"
+  "CMakeFiles/server.dir/runfile.c.obj"
+  "CMakeFiles/server.dir/sendFile.c.obj"
+  "CMakeFiles/server.dir/server.c.obj"
+  "CMakeFiles/server.dir/sysinfo.c.obj"
   "server.pdb"
+  "server.exe"
+  "server.exe.manifest"
+  "libserver.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
